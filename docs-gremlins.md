@@ -177,6 +177,46 @@ Uses WWW form encoding.
 }
 ```
 
+If the note is too short, error 400 is returned with the following text:
+```html
+<!doctype html>
+<html>
+
+  <head>
+    <title>Something went wrong</title>
+  </head>
+
+  <body>
+    Please try again in a minute.
+    <br><br>
+    Error 400: INVALID_NOTE
+    <br>
+     The note is too short. Must be at least 20 characters 
+  </body>
+
+</html>
+```
+
+If the note is too long, error 400 is returned with the following text:
+```html
+<!doctype html>
+<html>
+
+  <head>
+    <title>Something went wrong</title>
+  </head>
+
+  <body>
+    Please try again in a minute.
+    <br><br>
+    Error 400: INVALID_NOTE
+    <br>
+     The note is too long. Must be less than 100 characters 
+  </body>
+
+</html>
+```
+
 
 ### GET `/constants`
 
