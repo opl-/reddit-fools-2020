@@ -275,11 +275,12 @@ Unknown.
 
 ### GET `/embed`
 
-Unknown.
+Returns an HTML document containing the current global statistics.
 
 #### Query
 
-* `fullscreen` - Can be set to `1`.
+* `fullscreen` - If set, the elements become aligned to the top of the screen.
+* `nightmode` - Enables a dark theme if set to `1`.
 
 
 ### GET `/refresh_csrf` [auth]
