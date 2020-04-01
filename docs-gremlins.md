@@ -286,3 +286,11 @@ Returns an HTML document containing the current global statistics.
 ### GET `/refresh_csrf` [auth]
 
 Returns a new [CSRF token](https://en.wikipedia.org/wiki/Cross-site_request_forgery).
+
+#### Response
+
+An HTML document. Exact string with the token replaced with `x`:
+
+```html
+<gremlin-csrf token="x"></gremlin-csrf>
+```
