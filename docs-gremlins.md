@@ -63,7 +63,7 @@ check_csrf_token(): Invalid token
 
 ## Endpoints
 
-### GET `/room`
+### GET `/room` [auth]
 
 Shows the question and possible answers. Choosing an answer sends a request to `POST /submit_guess`.
 
@@ -112,7 +112,7 @@ Children:
 * The answer text.
 
 
-### POST `/submit_guess` [CSRF]
+### POST `/submit_guess` [auth] [CSRF]
 
 Sent when the user chooses their answer. Response value `next` is used to redirect the user to the appropriate page.
 
@@ -133,7 +133,7 @@ Uses WWW form encoding.
 ```
 
 
-### GET `/results`
+### GET `/results` [auth]
 
 Shows the user's and global statistics.
 
@@ -148,7 +148,7 @@ An HTML page.
 * `platform` - Platform the page is being loaded from. `desktop` makes the buttons smaller.
 
 
-### GET `/create_note`
+### GET `/create_note` [auth]
 
 Allows the users to set their answer. Sends a request to `POST /create_note`
 
@@ -157,7 +157,7 @@ Allows the users to set their answer. Sends a request to `POST /create_note`
 An HTML document with an input form.
 
 
-### POST `/create_note` [CSRF]
+### POST `/create_note` [auth] [CSRF]
 
 Used to set the user's answer.
 
@@ -211,7 +211,7 @@ Returns a list of global settings that allow the Reddit admins to adjust things 
 ```
 
 
-### GET `/test`
+### GET `/test` [404]
 
 A test page titled `Let's test POST` for the project. Includes buttons `Refresh the page`, `Force app callback`, and `Make api call with auth`.
 
@@ -230,7 +230,7 @@ The page source includes inlined authentication controller code.
 * `nightmode` - Enables a dark theme if set to `1`.
 
 
-### POST `/test` [CSRF]
+### POST `/test` [404] [CSRF]
 
 #### Request body
 
@@ -239,7 +239,7 @@ Uses the WWW form encoding.
 `test_val` - Response entered by the user
 
 
-### GET `/test2`
+### GET `/test2` [404]
 
 According to the version saved on the Internet Archive, this page is functionally identical to `/test`.
 
@@ -254,7 +254,7 @@ According to the version saved on the Internet Archive, this page is functionall
 * `nightmode` - Enables a dark theme if set to `1`.
 
 
-### GET `/test_content`
+### GET `/test_content` [404]
 
 Unknown.
 
