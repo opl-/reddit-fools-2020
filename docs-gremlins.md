@@ -16,9 +16,49 @@ See also the Archive sections under each endpoint.
 
 ## Authentication
 
+### `[auth]`
+
 Endpoints marked with `[auth]` require some form of authentication passed through headers.
 
+Confirmed methods of authentication are:
+
+* The `Cookie` header with the `reddit_session` cookie.
+
+If no authentication is sent, the API will reply with HTTP status 403 and the string:
+
+```
+<!doctype html>
+<html>
+
+  <head>
+    <title>PERMISSION DENIED</title>
+  </head>
+
+  <body>
+    Ah ah ah...
+    <br>
+    You didn't say the magic word!
+  </body>
+
+</html>
+```
+
+### `[CSRF]`
+
 Endpoints marked with `[CSRF]` require a CSRF token to be included in the request body. The token is injected as a hidden field with the name `csrf_token`.
+
+If an invalid CSRF token is sent, the API will reply with HTTP status 400 and the string:
+
+```
+400 Bad CSRF Token
+
+Access is denied.  This server can not verify that your cross-site request forgery token belongs to your login session.  Either you supplied the wrong cross-site request forgery token or your session no longer exists.  This may be due to session timeout or because browser is not supplying the credentials required, as can happen when the browser has cookies turned off.
+
+
+check_csrf_token(): Invalid token
+
+
+```
 
 
 ## Endpoints
