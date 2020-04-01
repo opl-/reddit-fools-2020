@@ -25,6 +25,8 @@ Endpoints marked with `[CSRF]` require a CSRF token to be included in the reques
 
 ### GET `/room`
 
+Shows the question and possible answers. Choosing an answer sends a request to `POST /submit_guess`.
+
 #### Archive
 
 01/04/2020:
@@ -68,6 +70,41 @@ Parameters:
 Children:
 
 * The answer text.
+
+
+### POST `/submit_guess` [CSRF]
+
+Sent when the user chooses their answer. Response value `next` is used to redirect the user to the appropriate page.
+
+#### Request body
+
+Uses WWW form encoding.
+
+* `note_id` - The UUID of the note the user has chosen.
+
+#### Response
+
+```js
+{
+	"success": boolean, // `true` if the request was successfully executed.
+	"result": "LOSE" | "WIN", // Whether the user has answered correctly or not.
+	"next": String, // URL to redirect the user to. Example: `/results?prev_result=LOSE`
+}
+```
+
+
+### GET `/results`
+
+Shows the user's and global statistics.
+
+#### Response
+
+An HTML page.
+
+#### Query
+
+* `prev_result` - `LOSE` if the user has lost the previous guess, `WIN` otherwise.
+
 
 
 ### GET `/constants`
