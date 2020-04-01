@@ -104,7 +104,8 @@ An HTML page.
 #### Query
 
 * `prev_result` - `LOSE` if the user has lost the previous guess, `WIN` otherwise.
-
+* `nightmode` - If set, enables dark theme.
+* `platform` - Platform the page is being loaded from. `desktop` makes the buttons smaller.
 
 
 ### GET `/constants`
