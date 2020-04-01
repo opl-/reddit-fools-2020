@@ -108,6 +108,36 @@ An HTML page.
 * `platform` - Platform the page is being loaded from. `desktop` makes the buttons smaller.
 
 
+### GET `/create_note`
+
+Allows the users to set their answer. Sends a request to `POST /create_note`
+
+#### Response
+
+An HTML document with an input form.
+
+
+### POST `/create_note` [CSRF]
+
+Used to set the user's answer.
+
+#### Request body
+
+Uses WWW form encoding.
+
+* `note` - The note. Has to be between 20 and 100 characters (according to the frontend).
+
+#### Response
+
+```js
+{
+	"success": true, // true if the request is a success.
+	"note_id": String, // String containing the UUID of the user's answer.
+	"prepared_note_text": String, // The normalized answer string.
+}
+```
+
+
 ### GET `/constants`
 
 Returns a list of global settings that allow the Reddit admins to adjust things on the fly.
