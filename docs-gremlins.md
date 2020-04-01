@@ -294,3 +294,43 @@ An HTML document. Exact string with the token replaced with `x`:
 ```html
 <gremlin-csrf token="x"></gremlin-csrf>
 ```
+
+
+### GET `/status` [404]
+
+Currently down, but used to return data for the wrong user, most likely due to caching.
+
+#### Response
+
+```js
+{
+	"global_score": 0.26248261177037435,
+	"imposter_score": 0.7375173882296256,
+	"imposter_score_pretty": "74%",
+	"total_games": 128679,
+	"correct_guesses": 33776,
+	"total_notes": 9793,
+	"third_stat": 0.1111111111111111,
+	"has_current_note": true,
+	"my_note_shown": 7,
+	"my_note_picked": 1,
+	"my_note_score": 0.14285714285714285,
+	"flair_type": null,
+	"games_played": 4,
+	"games_won": 1,
+	"user_score": 0.25,
+	"user_score_pretty": "25%",
+	"max_lose_streak": 2,
+	"lose_streak": 2,
+	"max_win_streak": 1,
+	"win_streak": 0,
+	"third_stat_pretty": "11%",
+	"third_stat_display": "percent",
+	"logged_in": true,
+	"prev_result": "None",
+	"current_note_text": "i got some weird squishy things inside me and im a walking anxiety machine.",
+	"can_submit_note": true,
+	"username": "the-masta-owl",
+	"next": "/room",
+}
+```
