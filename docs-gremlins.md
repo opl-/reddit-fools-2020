@@ -165,7 +165,7 @@ Used to set the user's answer.
 
 Uses WWW form encoding.
 
-* `note` - The note. Has to be between 20 and 100 characters (according to the frontend).
+* `note` - The new answer for this user. Must to be between 20 and 100 characters (this is enforced by the backend).
 
 #### Response
 
