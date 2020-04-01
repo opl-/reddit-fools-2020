@@ -1,4 +1,4 @@
-# Reddit Gremlins API
+# Reddit Gremlins/Imposter API
 
 The base URL is `https://gremlins-api.reddit.com/`. All responses are JSON encoded.
 
@@ -13,6 +13,53 @@ Endpoints marked with `[CSRF]` require a CSRF token to be included in the reques
 
 
 ## Endpoints
+
+### GET `/room`
+
+#### Archive
+
+01/04/2020:
+[index.js (includes comments)](https://web.archive.org/web/20200401172138/https://www.redditstatic.com/gremlins/client/index-410918c5.js),
+[client.js (includes comments)](https://web.archive.org/web/20200401172225/https://www.redditstatic.com/gremlins/client/client-f7ec2416.js)
+
+#### Query
+
+* `nightmode` - If set, enables dark theme.
+* `platform` - Platform the page is being loaded from. `desktop` makes the buttons smaller.
+
+#### Response
+
+An HTML document including some custom, Polymer based elements:
+
+##### `<gremlin-app>`
+
+Parameters:
+
+* `csrf="x"` - CSRF token required to be sent with the response.
+* `nightmode` - Enables the dark theme.
+* `platform="x"` - URL encoded value of the `platform` query parameter.
+
+##### `<gremlin-prompt>`
+
+Element containing the question.
+
+Children:
+
+* `<gremlin-meta>` - Contains the question.
+* `<gremlin-note>` - Each contains one of the possible answers.
+
+##### `<gremlin-note>`
+
+Contains one of the answers. Includes a unique ID of that answer.
+
+Parameters:
+
+* `id` - A UUID (including dashes) identifying the answer.
+
+Children:
+
+* The answer text.
+
 
 ### GET `/constants`
 
