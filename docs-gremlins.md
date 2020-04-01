@@ -5,6 +5,15 @@ The base URL is `https://gremlins-api.reddit.com/`. All responses are JSON encod
 All of the `/test` stuff seems to be a test for authentication and CSRF token refreshing.
 
 
+## Archival data
+
+* [Internet Archive (gremlins-api.reddit.com)](https://web.archive.org/web/sitemap/gremlins-api.reddit.com)
+* [Internet Archive (redditstatic.com/gremlins)](https://web.archive.org/web/sitemap/www.redditstatic.com/gremlins)
+* [github.com/notderw/redditAFD2020](https://github.com/notderw/redditAFD2020) - Contains data dumped by notderw
+
+See also the Archive sections under each endpoint.
+
+
 ## Authentication
 
 Endpoints marked with `[auth]` require some form of authentication passed through headers.
