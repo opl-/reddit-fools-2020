@@ -9,7 +9,8 @@ All of the `/test` stuff seems to be a test for authentication and CSRF token re
 
 * [Internet Archive (gremlins-api.reddit.com)](https://web.archive.org/web/sitemap/gremlins-api.reddit.com)
 * [Internet Archive (redditstatic.com/gremlins)](https://web.archive.org/web/sitemap/www.redditstatic.com/gremlins)
-* [github.com/notderw/redditAFD2020](https://github.com/notderw/redditAFD2020) - Contains data dumped by notderw
+* [github.com/notderw/redditAFD2020](https://github.com/notderw/redditAFD2020) - Contains data dumped by /u/derw aka /u/RenegadeAI
+* [spacescience.tech/dumps/](https://spacescience.tech/dumps/) - Contains database dumps of the SpaceScience.tech data
 
 See also the Archive sections under each endpoint.
 
