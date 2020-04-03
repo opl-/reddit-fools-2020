@@ -177,6 +177,13 @@ Uses WWW form encoding.
 }
 ```
 
+If the note already exists (this seems to apply to automatically generated notes too) (note might have been changed since it was chosen for us):
+```html
+<gremlin-notification>
+   This note has already been submitted 
+</gremlin-notification>
+```
+
 If the note is too short, error 400 is returned with the following text:
 ```html
 <!doctype html>
