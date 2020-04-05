@@ -16,6 +16,9 @@ All of the `/test` stuff seems to be a test for authentication and CSRF token re
 * [api.snakeroom.org/static/answers_dump.sql.gz](https://api.snakeroom.org/static/answers_dump.sql.gz) - Contains database dumps of the Snakeroom data, hosted by general programming
 	* 62.8MB, md5 `94810af7e06531eac1913dc026d30b84`
 	* [Internet Archive backup](https://web.archive.org/web/20200405001306/https://api.snakeroom.org/static/answers_dump.sql.gz)
+* [Ocean Wave dump](https://archive.org/download/wavedatabase) - Database dumps of the wave.ocean.rip data, hosted by u/TechnoAz aka Aztec on the Internet Archive
+	* `answers1.csv`: contains data collected during the first question, 70.9MB, md5 `49021ee745cefccd4a90acd370486658`
+	* `answers2.csv`: contains data collected during the second question, 81.5MB, md5 `35c34867925c758df69462f1ac6ec5ca`
 
 See also the Archive sections under each endpoint.
 
