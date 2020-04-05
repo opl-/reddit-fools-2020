@@ -9,8 +9,13 @@ All of the `/test` stuff seems to be a test for authentication and CSRF token re
 
 * [Internet Archive (gremlins-api.reddit.com)](https://web.archive.org/web/sitemap/gremlins-api.reddit.com)
 * [Internet Archive (redditstatic.com/gremlins)](https://web.archive.org/web/sitemap/www.redditstatic.com/gremlins)
-* [github.com/notderw/redditAFD2020](https://github.com/notderw/redditAFD2020) - Contains data dumped by /u/derw aka /u/RenegadeAI
-* [spacescience.tech/dumps/](https://spacescience.tech/dumps/) - Contains database dumps of the SpaceScience.tech data
+* [github.com/notderw/redditAFD2020](https://github.com/notderw/redditAFD2020) - Contains data dumped by u/derw aka u/RenegadeAI
+* [spacescience.tech/dumps/](https://spacescience.tech/dumps/) - Contains database dumps of the SpaceScience.tech data, hosted by u/xJRWR
+	* latest (20200403230001): 1447.1MB, md5 `76f8ae5ab9aad3af8c3e757e89dbd4ee`
+	* [Internet Archive backup](https://web.archive.org/web/20200405002125/https://spacescience.tech/dumps/export-20200403230001.sql.gz)
+* [api.snakeroom.org/static/answers_dump.sql.gz](https://api.snakeroom.org/static/answers_dump.sql.gz) - Contains database dumps of the Snakeroom data, hosted by general programming
+	* 62.8MB, md5 `94810af7e06531eac1913dc026d30b84`
+	* [Internet Archive backup](https://web.archive.org/web/20200405001306/https://api.snakeroom.org/static/answers_dump.sql.gz)
 
 See also the Archive sections under each endpoint.
 
